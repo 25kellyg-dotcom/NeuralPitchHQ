@@ -78,3 +78,190 @@ tml
     </div>
 </body>
 </html>
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Scout | Player Profile</title>
+    <style>
+        :root {
+            --neon-green: #39FF14;
+            --deep-black: #050505;
+            --glass-bg: rgba(25, 25, 25, 0.9);
+        }
+
+        body {
+            background-color: var(--deep-black);
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        /* Profile Header */
+        .header {
+            grid-column: 1 / -1;
+            border-left: 6px solid var(--neon-green);
+            padding: 20px;
+            background: var(--glass-bg);
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--neon-green);
+        }
+
+        /* Video Section */
+        .video-box {
+            background: var(--glass-bg);
+            border: 1px solid #222;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .video-player {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            border: 1px solid var(--neon-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Sidebar Stats */
+        .stats-sidebar {
+            background: var(--glass-bg);
+            border: 1px solid #222;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .stat-input {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.7rem;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            background: #000;
+            border: 1px solid #333;
+            color: var(--neon-green);
+            border-radius: 4px;
+        }
+
+        input:focus {
+            border-color: var(--neon-green);
+            box-shadow: 0 0 10px var(--neon-green);
+            outline: none;
+        }
+
+        /* AI Terminal */
+        .ai-terminal {
+            grid-column: 1 / -1;
+            background: #000;
+            border: 1px dashed var(--neon-green);
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            color: var(--neon-green);
+        }
+
+        .update-btn {
+            grid-column: 1 / -1;
+            padding: 20px;
+            background: var(--neon-green);
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .update-btn:hover {
+            box-shadow: 0 0 30px var(--neon-green);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Player Profile : Status Active</h1>
+    </div>
+
+    <!-- Main Content: Video Highlights -->
+    <div class="video-box">
+        <label>Highlight Reel (Enter URL below)</label>
+        <div class="video-player">
+            <span style="color:#333">VIDEO PREVIEW MODE</span>
+        </div>
+        <div style="margin-top:15px">
+            <input type="text" placeholder="Paste YouTube/Vimeo Link Here...">
+        </div>
+    </div>
+
+    <!-- Sidebar: Physical Data -->
+    <div class="stats-sidebar">
+        <div class="stat-input">
+            <label>Current Position</label>
+            <select>
+                <option>Striker (ST)</option>
+                <option>Winger (LW/RW)</option>
+                <option>Midfielder (CM)</option>
+                <option>Defender (CB)</option>
+            </select>
+        </div>
+
+        <div class="stat-input">
+            <label>Height (cm)</label>
+            <input type="number" placeholder="185">
+        </div>
+
+        <div class="stat-input">
+            <label>Weight (kg)</label>
+            <input type="number" placeholder="75">
+        </div>
+
+        <div class="stat-input">
+            <label>Top Speed (km/h)</label>
+            <input type="number" placeholder="34.2">
+        </div>
+    </div>
+
+    <!-- AI Output -->
+    <div class="ai-terminal">
+        > [AI_SCOUT_BOT]: INITIALIZING ANALYSIS...<br>
+        > PLAYER DATA SYNCED. STANDBY FOR PERFORMANCE METRICS...
+    </div>
+
+    <button class="update-btn">Sync to Scout Network</button>
+</div>
+
+</body>
+</html>
+
