@@ -1,0 +1,15 @@
+jsx
+function ScoutDashboard() {
+  return (
+    <div>
+      <h1>Global Talent Marketplace</h1>
+      <filter>
+        <select name="position">
+          <option value="striker">Striker</option>
+          <option value="midfielder">Midfielder</option>
+        </select>
+        <button onClick={fetchTalent}>Search AI Data</button>
+      </filter>
+    </div>
+  );
+}
