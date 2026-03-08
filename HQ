@@ -1,0 +1,3 @@
+mkdir football-scout-platform
+cd football-scout-platform
+git init
